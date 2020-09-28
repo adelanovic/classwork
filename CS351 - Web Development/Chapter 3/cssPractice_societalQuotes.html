@@ -1,0 +1,75 @@
+<!-- Created by: Delanovic, Adis - Chapter 3: Project 1 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /* This applies to the entire page */
+        html{
+            text-align: center;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        /* Applies to all headings */
+        h1, h2, h3, h4, h5, h6{
+            text-transform: uppercase;
+        }
+
+        /* Applies to the specific quotes or p elements*/
+        p{
+            padding: 5px;
+            font-family: "Times New Roman", serif;
+            text-align: justify;
+            margin-left: 50px;
+            margin-right: 50px;
+            text-indent: 10px;
+            border-style: dashed;
+            border-color: red;
+            width: 550px;
+            display: inline-block;
+        }
+
+        /* Changes one quotes background to grey */
+        .grey-background{
+            background-color: darkgray;
+        }
+
+        /* class selectors for bold and strike-through */
+        .strike-through{
+            text-decoration: line-through;
+        }
+        .bold{
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<!-- Displayed Content Starts Here -->
+<body>
+<h1>css practice</h1>
+<h2>societal quotes</h2>
+<p>
+    "Society as a whole benefits immeasurably from a climate in which all persons
+    regardless of race or gender may have the opportunity to earn respect, responsibility,
+    advancement, and remuneration based on <span class = "strike-through">inheritance</span>
+    ability."
+    <br><br>
+    Justice Sandra Day O'Connor
+</p><br>
+<p class = "grey-background">
+    "Shall i not inform you of a better act than fasting, alms
+    and prayers? Making peace  between one another: enmity and malice tear
+    up heavenly rewards by the roots."
+    <br><br>
+    Prophet Muhammed
+</p><br>
+<p>
+    "Education is the <span class="bold">most powerful</span>
+    weapon which you can use to change the world."
+    <br><br>
+    President Nelson Mandela
+</p>
+</body>
+</html>

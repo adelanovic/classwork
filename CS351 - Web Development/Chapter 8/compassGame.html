@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Compass Game</title>
+    <script src="compassGame.js"> </script>
+    <link rel="stylesheet" type="text/css" href="compassGame.css">
+    <noscript>
+        <div id="disabled">
+            <span id="msg"> WARNING: JavaScript is not enabled! This game is made using JavaScript!</span>
+        </div>
+    </noscript>
+</head>
+
+<body>
+    <header>
+        <h1>Compass Game</h1>
+    </header>
+    <div class="container">
+        <p id="top-directions">
+            The direction letters on the compass are scrambled. Press the arrows to properly position the direction
+            letters.
+        </p>
+            <table class="rows">
+                <tr>
+                    <td><input class="diagonal" id="arrow-one" type= button value="&harr;" onclick="swapTop(); checkWinner()"></td>
+                    <td><span id="top-value">S</span></td>
+                </tr>
+                <tr>
+                    <td><span id="left-value">N</span>
+                    <td><input class="normal" id="arrow-two" type= button value="&harr;" onclick="swapMiddle(); checkWinner()"></td>
+                    <td><span id="right-value">E</span></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><span id="bottom-value">W</span></td>
+                    <td><input class="diagonal" id="arrow-three" type= button value="&harr;" onclick="swapBottom(); checkWinner()"></td>
+                </tr>
+            </table>
+    </div>
+
+        <div class="user-input">
+            <p>
+                To restart the game, press <span class="italic">Restart</span>, enter N, S, E and W in any particular order
+                in the boxes below then press <span class="italic">Update</span>.
+            </p>
+            <input id="restart" type="button" value="Restart" onclick="restartGame()">
+            <form class="input-form">
+                <br>
+                Top:
+                <input type="text" id="top" size="1" disabled>
+                Left:
+                <input type="text" id="left" size="1" disabled>
+                Right:
+                <input type="text" id="right" size="1" disabled>
+                Bottom:
+                <input type="text" id="bottom" size="1" disabled>
+            </form>
+            <br>
+            <input id="update" type="button" value="Update" onclick="updateGame()" disabled>
+        </div>
+    </div>
+</body>
+</html>

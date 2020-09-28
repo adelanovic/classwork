@@ -1,0 +1,97 @@
+<!-- Created by: Delanovic Adis, Chapter 5, Project 1 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Food Pyramid</title>
+    <style>
+        table{
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        table, th, tr, td  {
+            border: 1px solid black;
+        }
+
+        /* Descendant selector */
+        thead  tr th {
+            border: 2px solid white;
+            border-spacing: 10px;
+        }
+
+        th, td {
+            padding: 15px;
+        }
+        td {
+            text-align: center;
+        }
+
+        /*Descendant selector */
+        tbody tr th {
+            text-align: left;
+            border: 2px double black;
+        }
+
+        tbody tr td {
+            border: 2px double black;
+        }
+        thead {
+            background-color: red;
+            color: white;
+        }
+        caption {
+            padding: 10px;
+        }
+
+        #inner, #inner2 {
+            font-weight: normal;
+            font-style: italic;
+        }
+    </style>
+
+</head>
+<body>
+    <table>
+        <caption><h1>The Food Pyramid</h1></caption>
+        <thead>
+            <tr>
+                <th> &nbsp;&nbsp;&nbsp;</th>
+                <th colspan = "2"> Serving Guidelines</th>
+            </tr>
+            <tr>
+                <th>Food Group</th>
+                <th>2005-2010</th>
+                <th>2011 - Present</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Milk Group<br><span id = "inner"> (Milk, Yogurt, Cheese)</span></th>
+                <td> 2-3 </td>
+                <td> 3-4 </td>
+            </tr>
+            <tr>
+                <th>Meat Group<br><span id= "inner2"> (Beef, Poultry, Fish, Beans)</span></th>
+                <td> 2-3 </td>
+                <td> 5-6 </td>
+            </tr>
+            <tr>
+                <th> Fruits </th>
+                <td> 2-4 </td>
+                <td> 2-4 </td>
+            </tr>
+            <tr>
+                <th> Vegetables </th>
+                <td> 3-5 </td>
+                <td> 1-2 </td>
+            </tr>
+            <tr>
+                <th>Heavily Salted Snacks</th>
+                <td> 1-2 </td>
+                <td> 3-5 </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

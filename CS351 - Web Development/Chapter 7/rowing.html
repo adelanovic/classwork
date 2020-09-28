@@ -1,0 +1,69 @@
+<!-- Created by Adis Delanovic, Chapter 7, Project 1-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rowing</title>
+    <link rel="icon" type="image/png" href="./images/rowicon.png"/>
+    <style>
+        body {
+            background-image: url("images/row.png");
+            background-size: cover;
+            color: white;
+	    font-size: larger;
+        }
+
+        .large-bold{
+            font-size: larger;
+            font-weight: bold;
+        }
+
+        video {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>World Rowing Federation</h1>
+    </header>
+
+    <div class="content">
+        <p>
+            This page tells you everything you need to know about rowing. Find a boat. Find a body of water.
+            Row.
+        </p>
+        <p class="large-bold">
+            The first "Row, Row, Row Your Boat" sound clip starts automatically and plays continuously (unless
+            you pause it.<br>
+        </p>
+
+        <!-- Doesn't appear to work in chrome/firefox but does work in IE -->
+        <audio autoplay controls loop>
+            <source src="./audio/row_mp3.mp3" type="audio/mp3">
+            <source src="./audio/row_ogg.ogg" type="audio/ogg">
+            Audio not supported by your browser.
+        </audio>
+
+        <p class="large-bold">
+            Try to start a second sound clip between the first clips "boat" and "gently" so the two clips form a
+            mellifluous harmony that plays continuously.
+        </p>
+
+        <audio  controls loop>
+            <source src="./audio/row_mp3.mp3" type="audio/mp3">
+            <source src="./audio/row_ogg.ogg" type="audio/ogg">
+            Audio not supported by your browser.
+        </audio>
+
+        <p class="large-bold">
+            Rowing Video:
+        </p>
+
+        <iframe width="640" height="360"
+                src="http://www.youtube.com/embed/mB7Ul50XZMI?autoplay=1&mute=1">
+        </iframe>
+    </div>
+</body>
+</html>

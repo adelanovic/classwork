@@ -1,0 +1,102 @@
+<!-- Created by: Delanovic, Adis, Chapter 6, Project 1 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>World Weather</title>
+    <style>
+
+        header nav a  {
+            text-decoration: none;
+            font-size: x-large;
+        }
+
+        header nav a:hover {
+            background-color: silver;
+        }
+
+        a:visited {
+            color: purple;
+        }
+
+        figure{
+            margin-left: 0;
+            text-align: left;
+            float:left;
+            border: 2px solid black;
+        }
+        .table {
+            display: table;
+            float: left;
+            margin-left: 30px;
+            text-align: right;
+
+        }
+        .rows{
+            display: table-cell;
+            padding: 20px;
+            width: 100%;
+            font-weight: normal;
+            font-size: large;
+            text-align: left;
+
+        }
+        .tblHeader{
+            display: table-row-group;
+            font-size: x-large;
+            font-weight: bold;
+            vertical-align: middle;
+
+        }
+
+        span{
+            font-size: x-large;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1> World Weather</h1>
+        <nav class="main">
+            <a href="#asia">Asia</a>
+            <span> | </span>
+            <a href="#europe">Europe</a>
+            <span> | </span>
+            <a href="#africa">Africa</a>
+        </nav>
+    </header>
+    <section id = "image">
+        <figure>
+            <img src="hurricane.jpg" alt="Hurricane as viewed from ISS">
+        </figure>
+    </section>
+      <div class="table">
+          <p id = "asia">
+          <div class="tblHeader">&nbsp; <br> Asia:
+                <nav class="rows">
+                    <div><a href="https://www.accuweather.com/en/kr/seoul/226081/weather-forecast/226081">Seoul, South Korea</a></div>
+                    <div><a href="https://www.accuweather.com/en/cn/beijing/101924/weather-forecast/101924">Beijing, China</a></div>
+                    <div><a href="https://www.accuweather.com/en/in/mumbai/204842/weather-forecast/204842">Mumbai, India</a></div>
+                </nav>
+          </div>
+          <p id = "africa">
+          <div class="tblHeader">&nbsp; <br>Africa:
+              <nav class="rows">
+                  <div><a href="https://www.accuweather.com/en/ng/lagos/4607/weather-forecast/4607">Lagos, Nigeria</a></div>
+                  <div><a href="https://www.accuweather.com/en/ly/tripoli/230555/weather-forecast/230555">Tripoli, Libya</a></div>
+                  <div><a href="https://www.accuweather.com/en/eg/cairo/127164/weather-forecast/127164">Cairo, Egypt</a></div>
+              </nav>
+          </div>
+          <p id = "europe">
+          <div class="tblHeader">&nbsp; <br> Europe: &nbsp;
+              <nav class="rows">
+                  <div><a href="https://www.accuweather.com/en/ba/liskovac/1679472/weather-forecast/1679472">Liskovac, Bosnia</a></div>
+                  <div><a href="https://www.accuweather.com/en/si/ljubljana/299198/weather-forecast/299198">Ljubljana, Slovenia</a></div>
+                  <div><a href="https://www.accuweather.com/en/hr/zagreb/117910/weather-forecast/117910">Zagreb, Croatia</a></div>
+              </nav>
+          </div>
+      </div>
+    </section>
+</body>
+</html>

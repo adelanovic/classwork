@@ -1,0 +1,79 @@
+<!-- Author: Delanovic, Adis Chapter 2, Project 1. -->
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Java ShutDownHook example</title>
+</head>
+<body>
+  <h1>Creating a Backup using a ShutdownHook in Java</h1>
+  <img src="java.jpg" alt="Java Logo" width="780" height="200">
+  <pre style="color: brown; background-color: black; width: 780px">
+  <code>
+
+      1 Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+
+      2     try {
+
+      3           gson = new GsonBuilder().setPrettyPrinting().create();
+
+      4           Writer datfile = new FileWriter("backup.dat");
+
+      5           String jsonString = gson.toJson(favoriteMovies);
+
+      6           datfile.write(jsonString);
+
+      7           datfile.close();
+
+      8     } catch (IOException e) {
+
+      9           e.printStackTrace();<
+
+      10    }
+
+      11 }));
+
+  </code>
+</pre>
+  <hr width="780px"; align="left">
+  <h3 style="background-color: black; color: white; width: 780px">Explanation of the Code</h3>
+  <p style="color: black">
+    This code is from a <strong>Movie Database</strong> program created by me for your CS249 class. I needed the program to create a <br>
+      backup in-case the program crashed or exited. The above code with execute when either 1 of two conditions is met<br>
+      The first condition is the program exits normally or we make a call to System.exit(). The second condition is if<br>
+      the user terminates the program using Ctrl+C exits the program manually by pressing the X icon, or any system<br>
+      shutdown. The purpose of the above code is to add a backup of our owned movies. <br><br>
+
+      Jendrock explains the shutdown hook as follows...<br><br>
+      &emsp;<q><i>A shutdown hook is simply an initialized but unstarted thread. When the virtual machine begins its shutdown sequence<br>
+      &emsp; it will start all registered shutdown hooks in some unspecified order and let them run concurrently. When all the hooks<br>
+      &emsp; have finished it will then run all uninvoked finalizers if finalization-on-exit has been enabled. Finally, the virtual <br>
+      &emsp;machine will halt. Note that daemon threads will continue to run during the shutdown sequence, as will non-daemon<br>
+      &emsp; threads if shutdown was initiated by invoking the exit method.</i></q><br><br><cite>&emsp;Jendrock, E., 2014. The Java EE 8 Tutorial.
+      Upper Saddle River, NJ: Addison-Wesley.</cite><br><br>
+
+      In short, when the conditions are met, more code will run, and then the JVM will completely shut down. <br><br>
+
+    <mark>Line 2</mark> starts a try/catch block for exception handling. The try portion of the code is attempted, if it fails<br>
+      an exception is called<br><br>
+
+    The best part about Java and this code is creating instances of different objects. The <var>datfile</var> variable on line 3<br>
+      creates a new instance of the Writer class, it then passes a argument to the FileWriter of what the new filename would be<br>
+    <samp>"backup.dat"</samp>. On line 5 a new String is created and it uses our gson (Java Object) to convert it to a JavaScript Object Notation.<br>
+      The String filled with the JSON data is then written to a file using the Writer object "datfile". The Writer object writes the<br>
+    data down to <samp>"backup.dat"</samp>. The file is then closed and the shutdown hook has completed. A backup of our movies was<br>
+      created!<br><br>
+  </p>
+  <hr width="780px", align="left">
+  <h3 style="background-color: black; color: white; width: 780px">CRAP</h3>
+  <p>
+    By using the <abbr title="Complicated Reliable Application Page">CRAP</abbr>  method when it comes to programming with Java we can achieve the shutdownhook and <br>
+    much more!
+  </p><br>
+  <div>&copy;2020</div><br>
+  <address>1554 Javaway Way
+           90210 Los Angeles, CA
+  USA</address>
+  <hr width="780px", align="left">
+</body>
+</html>

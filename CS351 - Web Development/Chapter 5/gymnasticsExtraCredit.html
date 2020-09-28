@@ -1,0 +1,141 @@
+<!-- Created by: Delanovic Adis, Chapter 5, Project 1 Extra Credit Assignment-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gynmastics</title>
+    <style>
+
+        /* Set background color */
+        html{
+            background-color: lightcyan;
+        }
+
+        /* Font size and font type for the section */
+        section{
+            font: large "Courier New";
+        }
+
+        /* Image figure on bottom */
+        figure{
+            position: absolute;
+            top: 390px;
+            margin-left: 0;
+            text-align: left;
+            float:left;
+        }
+
+        /* Figure Caption */
+        figcaption{
+            text-align: center;
+            font-style: italic;
+        }
+
+        /* Top Banner */
+        .banner{
+            text-align: center;
+            font-style: italic;
+            position: absolute;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: darkblue;
+            color: gold;
+            padding: 30px 30px;
+            width: 650px;
+        }
+
+        #innerF{
+            top: 170px;
+            left: 20px;
+            position: absolute;
+        }
+        #innerM{
+            top: 170px;
+            left: 350px;
+            position: absolute;
+        }
+        .femaleGym{
+            top: 200px;
+            left: 20px;
+            position: absolute;
+        }
+        .maleGym{
+            top: 200px;
+            left: 350px;
+            position: absolute;
+        }
+
+
+        /* Descendant Selectors for the lists */
+        ol li {
+            list-style: circle;
+        }
+
+        ol li li {
+            list-style: decimal;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Container -->
+    <header>
+   	<h1 class = "banner">Gymnastics!<br>Go for the gold!</h1>
+        <h3 id = "innerF">Greatest Female Gymnasts</h3>
+        <h3 id = "innerM">Greatest Male Gymnasts</h3>
+    </header>
+
+    <!-- Female Gymnasts Section -->
+    <section class = "femaleGym">
+        <ol>
+            <li>Rumania:
+                    <ol>
+                      <li> Nadia Commaneci</li>
+                    </ol>
+             </li>
+            <li>Russia:
+                <ol start="2">
+                    <li>Olga Korbut</li>
+                    <li>Larisa Latynina</li>
+                </ol>
+            </li>
+            <li>United States:
+                <ol start="4">
+                    <li> Gabby Douglas</li>
+                    <li> Mary Lou Retton</li>
+                </ol>
+
+            </li>
+        </ol>
+    </section>
+
+    <!-- Male Gymnasts section -->
+    <section class = "maleGym">
+        <ol>
+        <li>Russia:
+            <ol>
+                <li>Vitaly Scherbo</li>
+                <li>Alexei Nemov</li>
+                <li>Nikolai Andrianov</li>
+            </ol>
+        </li>
+        <li>Japan:
+            <ol start="4">
+                <li>Sawao Kato</li>
+            </ol>
+        </li>
+        <li>United States:
+            <ol start="5">
+                <li> Adis Delanovic</li>
+            </ol>
+
+        </li>
+        </ol>
+    </section>
+
+    <!-- Figure Container -->
+    <figure>
+        <img style = "float: left" src="gym.png" alt="BirthRate">
+        <figcaption>Flying Through the Air with the Greatest of Ease.</figcaption>
+    </figure>
+</body>
+</html>
